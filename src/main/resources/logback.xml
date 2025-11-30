@@ -1,0 +1,50 @@
+<configuration>
+	<!-- Common Appenders -->
+	<appender name="logstash"
+		class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+			<customFields>{"type":"elk-monitoring"}</customFields>
+		</encoder>
+	</appender>
+	<!-- Prod Logger -->
+	<springProfile name="prod">
+		<appender name="prodLogstash"
+			class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+			<destination>192.168.1.10:4560</destination>
+			<encoder class="net.logstash.logback.encoder.LogstashEncoder">
+				<customFields>{"type":"elk-monitoring", "environment":"prod"}</customFields>
+			</encoder>
+		</appender>
+		<root level="INFO">
+			<appender-ref ref="prodLogstash" />
+		</root>
+	</springProfile>
+	<!-- Dev Logger -->
+	<springProfile name="dev">
+		<!-- Console Appender -->
+		<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %replace(%msg){'[\r\n]+',' '}%n</pattern>
+			</encoder>
+		</appender>
+		<!-- File Appender -->
+		<appender name="file"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<file>./logs/elk-monitoring.log</file>
+			<rollingPolicy
+				class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>./logs/%d{yyyy-MM-dd}-elk-monitoring.log</fileNamePattern>
+				<maxHistory>30</maxHistory>
+			</rollingPolicy>
+			<encoder>
+				<pattern>
+					<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %replace(%msg){'[\r\n]+',' '}%n</pattern>
+				</pattern>
+			</encoder>
+		</appender>
+		<root level="INFO">
+			<appender-ref ref="console" />
+			<appender-ref ref="file" />
+		</root>
+	</springProfile>
+</configuration>
