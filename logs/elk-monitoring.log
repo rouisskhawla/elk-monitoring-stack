@@ -1,0 +1,18 @@
+21:07:13.545 [main] INFO  c.d.e.m.ApiElkMonitoringApplicationTests - Starting ApiElkMonitoringApplicationTests using Java 17.0.12 with PID 9656 (started by issam in C:\Users\issam\OneDrive\Desktop\elk-monitoring-stack)
+21:07:13.554 [main] INFO  c.d.e.m.ApiElkMonitoringApplicationTests - The following 1 profile is active: "dev"
+21:07:16.132 [main] INFO  c.d.e.m.ApiElkMonitoringApplicationTests - Started ApiElkMonitoringApplicationTests in 3.07 seconds (process running for 5.228)
+21:07:38.868 [main] INFO  c.d.e.m.ApiElkMonitoringApplication - Starting ApiElkMonitoringApplication using Java 17.0.12 with PID 1008 (C:\Users\issam\OneDrive\Desktop\elk-monitoring-stack\target\classes started by issam in C:\Users\issam\OneDrive\Desktop\elk-monitoring-stack)
+21:07:38.874 [main] INFO  c.d.e.m.ApiElkMonitoringApplication - The following 1 profile is active: "dev"
+21:07:39.786 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+21:07:39.796 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+21:07:39.798 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:07:39.799 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+21:07:39.887 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:07:39.888 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 949 ms
+21:07:40.184 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+21:07:40.206 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+21:07:40.217 [main] INFO  c.d.e.m.ApiElkMonitoringApplication - Started ApiElkMonitoringApplication in 1.931 seconds (process running for 2.882)
+21:09:46.905 [RMI TCP Connection(4)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+21:09:46.926 [RMI TCP Connection(4)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+21:09:46.926 [RMI TCP Connection(4)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+21:09:46.933 [RMI TCP Connection(4)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
